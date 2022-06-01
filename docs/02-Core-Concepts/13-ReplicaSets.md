@@ -88,7 +88,7 @@ In this section, we will take a look at the below
        matchLabels:
         type: front-end
  ```
-#### ReplicaSet requires a selector definition when compare to Replication Controller.
+#### ReplicaSet requires a selector definition when compare to Replication Controller. This is because ReplicaSets can control Pods that were created before the ReplicaSet was created and needs a way to find these Pods.
    
   - To Create the replicaset
     ```
