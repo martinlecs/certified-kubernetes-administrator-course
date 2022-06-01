@@ -84,7 +84,9 @@ In this section, we will take a look at the below
          - name: nginx-container
            image: nginx
      replicas: 3
-     selector: // This definition can be left and is not required. ReplicaSet assumes that we want to select Pods with labels as defined in the template field.
+     // This is required unlike in Replication Controllers where it can be left out.
+     // Replication Controllers assumes that we want to select Pods with labels as defined in the template field.
+     selector: 
        matchLabels:
         type: front-end
  ```
